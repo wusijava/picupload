@@ -39,13 +39,14 @@ public class imgUploadController {
         //获取根目录
         String path=null;
         try {
-           //path = ResourceUtils.getURL("src\\main\\resources").getPath();
-            path = ResourceUtils.getURL("classpath:").getPath();
+           path = ResourceUtils.getURL("src\\main\\resources").getPath();
+            //path = ResourceUtils.getURL("classpath:").getPath();
             System.out.println("++++++++++++++"+path);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-        String filePath ="/home/imgupload";
+        String filePath ="/imgupload";
+        //String filePath ="/home/imgupload";
         String se = filePath + "/"+newName;
         System.out.println(se);
         File dest = new File(se);
